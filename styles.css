@@ -1,0 +1,469 @@
+:root {
+  color-scheme: light;
+  --bg: #eef3ff;
+  --bg-accent: #dbe7ff;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --surface-border: rgba(28, 62, 132, 0.14);
+  --text: #102347;
+  --muted: #50627f;
+  --primary: #1d4ed8;
+  --primary-deep: #1538a8;
+  --primary-soft: rgba(29, 78, 216, 0.1);
+  --shadow: 0 24px 60px rgba(16, 35, 71, 0.12);
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --content-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(29, 78, 216, 0.22), transparent 36%),
+    radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.18), transparent 24%),
+    linear-gradient(180deg, #f7faff 0%, var(--bg) 100%);
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-deep);
+}
+
+.page {
+  width: min(100% - 2rem, var(--content-width));
+  margin: 0 auto;
+  padding: 1.25rem 0 4rem;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #60a5fa 100%);
+  color: #fff;
+  font-size: 1.35rem;
+  box-shadow: 0 12px 24px rgba(29, 78, 216, 0.25);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand-copy strong {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.brand-copy span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(16, 35, 71, 0.08);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+  backdrop-filter: blur(10px);
+}
+
+.nav a.active,
+.nav a:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.hero,
+.panel,
+.policy,
+.support-card,
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.hero {
+  overflow: hidden;
+  padding: 2.5rem;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -8rem -8rem auto;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.3), transparent 65%);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary-deep);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.policy h1,
+.support-card h1 {
+  margin: 1rem 0 0.85rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.policy h1,
+.support-card h1 {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.hero p,
+.lede,
+.support-card p,
+.policy p,
+.policy li,
+.policy td,
+.policy th {
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.72;
+}
+
+.hero p,
+.lede,
+.support-card .lede {
+  max-width: 48rem;
+  font-size: 1.12rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.7rem;
+}
+
+.button,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.85rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button {
+  background: var(--primary);
+  color: #fff;
+}
+
+.button:hover {
+  background: var(--primary-deep);
+  color: #fff;
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(16, 35, 71, 0.1);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.35rem;
+}
+
+.panel {
+  padding: 1.5rem;
+}
+
+.panel h2,
+.policy h2,
+.support-card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.35rem;
+}
+
+.panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.span-7 {
+  grid-column: span 7;
+}
+
+.span-5 {
+  grid-column: span 5;
+}
+
+.metric-list,
+.link-list,
+.support-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.metric-list li,
+.link-list li,
+.support-list li {
+  margin-bottom: 0.65rem;
+}
+
+.policy,
+.support-card {
+  padding: 2.2rem;
+}
+
+.policy-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(16, 35, 71, 0.08);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.policy section + section,
+.support-card section + section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(16, 35, 71, 0.08);
+}
+
+.policy strong,
+.support-card strong,
+.panel strong {
+  color: var(--text);
+}
+
+code {
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.45rem;
+  background: rgba(16, 35, 71, 0.06);
+  font-family: "SFMono-Regular", "Menlo", "Monaco", monospace;
+  font-size: 0.94em;
+}
+
+.policy table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  margin-top: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+}
+
+.policy th,
+.policy td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(16, 35, 71, 0.08);
+}
+
+.policy th {
+  color: var(--text);
+  background: rgba(29, 78, 216, 0.06);
+  font-size: 0.95rem;
+}
+
+.policy tr:last-child td {
+  border-bottom: 0;
+}
+
+.quote {
+  margin: 2rem 0 0;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: var(--primary-soft);
+  color: var(--primary-deep);
+  font-style: italic;
+}
+
+.contact-card {
+  margin-top: 1.4rem;
+  padding: 1.3rem 1.4rem;
+  background: var(--surface-strong);
+}
+
+.contact-card p {
+  margin: 0.4rem 0 0;
+}
+
+.footer {
+  padding: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: inherit;
+}
+
+@media (max-width: 860px) {
+  .page {
+    width: min(100% - 1.2rem, var(--content-width));
+    padding-top: 0.8rem;
+  }
+
+  .masthead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero,
+  .policy,
+  .support-card {
+    padding: 1.5rem;
+  }
+
+  .span-7,
+  .span-5 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav {
+    width: 100%;
+  }
+
+  .nav a {
+    flex: 1 1 100%;
+  }
+
+  .policy table,
+  .policy thead,
+  .policy tbody,
+  .policy th,
+  .policy td,
+  .policy tr {
+    display: block;
+  }
+
+  .policy thead {
+    display: none;
+  }
+
+  .policy tr {
+    margin-bottom: 0.85rem;
+    border-radius: var(--radius-md);
+    background: var(--surface-strong);
+    overflow: hidden;
+  }
+
+  .policy td {
+    border: 0;
+    padding: 0.8rem 1rem;
+  }
+
+  .policy td::before {
+    display: block;
+    margin-bottom: 0.15rem;
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .policy td:nth-child(1)::before {
+    content: "Data Type";
+  }
+
+  .policy td:nth-child(2)::before {
+    content: "Purpose";
+  }
+
+  .policy td:nth-child(3)::before {
+    content: "Stored Where";
+  }
+}
