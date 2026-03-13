@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://footsteps.akhave.in/sitemap.xml
