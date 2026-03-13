@@ -366,10 +366,6 @@ code {
   grid-column: span 5;
 }
 
-.span-12 {
-  grid-column: span 12;
-}
-
 .metric-list,
 .link-list,
 .support-list {
