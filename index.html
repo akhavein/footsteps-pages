@@ -4,18 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Footsteps | Privacy and Support</title>
+    <meta name="theme-color" content="#1D4ED8">
     <meta
       name="description"
       content="Footsteps is a privacy-first location journal. Learn how the app handles your data and how to get support."
     >
     <link rel="canonical" href="https://footsteps.akhave.in/">
+    <link rel="icon" type="image/png" href="assets/app-icon.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="page">
       <header class="masthead">
         <a class="brand" href="./">
-          <span class="brand-mark" aria-hidden="true">F</span>
+          <img class="brand-mark" src="assets/app-icon.png" alt="">
           <span class="brand-copy">
             <strong>Footsteps</strong>
             <span>Privacy and support</span>
@@ -30,17 +32,31 @@
 
       <main>
         <section class="hero">
-          <span class="eyebrow">Local-first by design</span>
-          <h1>Privacy without caveats.</h1>
-          <p>
-            Footsteps is a privacy-first iOS app that automatically tracks where you go and helps
-            you journal your journeys. Your data stays on your device. There are no third-party
-            analytics, no ad SDKs, and no cloud backend operated by Footsteps.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="privacy/">Read the privacy policy</a>
-            <a class="button-secondary" href="support/">Contact support</a>
+          <div>
+            <span class="eyebrow">Footsteps for iPhone</span>
+            <h1>A privacy-first site that looks like the app.</h1>
+            <p>
+              Footsteps is a local-first location journal built around the same visual language as
+              the app itself: crisp system typography, strong launch-screen blue, and the route
+              shield icon that anchors the brand. Your data stays on your device.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="privacy/">Read the privacy policy</a>
+              <a class="button-secondary" href="support/">Contact support</a>
+            </div>
           </div>
+          <aside class="hero-preview" aria-label="App identity">
+            <img class="hero-icon" src="assets/app-icon.png" alt="Footsteps app icon">
+            <div class="hero-preview-copy">
+              <strong>Footsteps</strong>
+              <span>Your private location journal</span>
+            </div>
+            <ul class="hero-list">
+              <li>All visit history and routes stay on-device.</li>
+              <li>No analytics, ad SDKs, or Footsteps cloud backend.</li>
+              <li>Apple-only reverse geocoding for readable places.</li>
+            </ul>
+          </aside>
         </section>
 
         <section class="grid" aria-label="Overview">
@@ -48,16 +64,17 @@
             <h2>What the app does</h2>
             <p>
               Footsteps helps you keep a personal location journal with on-device visit detection,
-              route history, saved places, and activity insights. Its privacy model is simple: the
-              product works without collecting or storing your personal data on remote servers.
+              route history, saved places, and activity insights. The app uses Apple system UI and
+              a simple color story: blue for navigation and action, white for readable content, and
+              the green route icon as the signature brand mark.
             </p>
           </article>
           <article class="panel span-5">
-            <h2>Privacy highlights</h2>
+            <h2>Theme highlights</h2>
             <ul class="metric-list">
-              <li>No analytics, advertising, or third-party SDKs.</li>
-              <li>Location and motion data stay on your device.</li>
-              <li>Reverse geocoding relies only on Apple&apos;s built-in services.</li>
+              <li>Launch-screen blue: <strong>#1D4ED8</strong></li>
+              <li>App accent blue: <strong>#007AFF</strong></li>
+              <li>Route-shield icon with mint and deep-teal tones</li>
             </ul>
           </article>
           <article class="panel span-5">
@@ -71,9 +88,9 @@
           <article class="panel span-7">
             <h2>For App Store review</h2>
             <p>
-              The canonical policy URL for App Store Connect is
+              The canonical Privacy Policy URL for App Store Connect is
               <a href="https://footsteps.akhave.in/privacy/">footsteps.akhave.in/privacy/</a>.
-              The support URL is
+              The Support URL is
               <a href="https://footsteps.akhave.in/support/">footsteps.akhave.in/support/</a>.
             </p>
           </article>
