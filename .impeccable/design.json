@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T19:13:27.742Z",
+  "title": "Design System: footsteps-pages",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "source-1",
+        "value": "0 10px 24px rgba(20, 122, 104, 0.18)",
+        "purpose": "styles.css:94 .brand-mark"
+      },
+      {
+        "name": "source-2",
+        "value": "0 4px 12px rgba(17, 24, 39, 0.04)",
+        "purpose": "styles.css:132 .nav a"
+      },
+      {
+        "name": "source-3",
+        "value": "0 28px 54px rgba(29, 78, 216, 0.22)",
+        "purpose": "styles.css:170 .hero,\n.page-banner"
+      },
+      {
+        "name": "source-4",
+        "value": "inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        "purpose": "styles.css:298 .hero-preview"
+      },
+      {
+        "name": "source-5",
+        "value": "0 16px 32px rgba(0, 0, 0, 0.16)",
+        "purpose": "styles.css:315 .hero-icon"
+      },
+      {
+        "name": "source-6",
+        "value": "var(--shadow)",
+        "purpose": "styles.css:358 .panel,\n.policy-card,\n.support-card,\n.contact-card"
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "source-1",
+        "value": "(max-width: 920px)",
+        "purpose": "styles.css:533 @media"
+      },
+      {
+        "name": "source-2",
+        "value": "(max-width: 760px)",
+        "purpose": "styles.css:549 @media"
+      },
+      {
+        "name": "source-3",
+        "value": "(max-width: 640px)",
+        "purpose": "styles.css:585 @media"
+      }
+    ]
+  },
+  "components": [],
+  "narrative": {
+    "overview": "Source capture of the incumbent implementation. Rendered appearance, creative direction and component previews remain unverified.",
+    "keyCharacteristics": [],
+    "rules": [],
+    "dos": [
+      "Preserve existing tokens, selectors, light/dark variants, locale overrides and platform semantics."
+    ],
+    "donts": [
+      "Do not synthesize missing colors, scales, component previews or product claims."
+    ]
+  }
+}
